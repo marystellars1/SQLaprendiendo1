@@ -1,0 +1,26 @@
+#Agregar datos de empleados.
+INSERT INTO empleados(Nombre,cargo,salario) VALUES('Sofia','Asesoria psicologica','6689000');
+INSERT INTO empleados(Nombre,cargo,salario) VALUES( 'Luchis','Gerente comercial','7887000');
+INSERT INTO empleados(Nombre,cargo,salario) VALUES('Mauri','Asesor comercial','9922000');
+
+#Seleccionar cargos
+SELECT * FROM `cargos`
+
+#Seleccionar empleados que ganan mas de 3000000
+SELECT * FROM `empleados` WHERE 'Salario'> 3000000;
+
+#Actualizar informacion
+USE empresa;
+UPDATE empleados SET Salario = 10899873 WHERE nombre = 'Sofia';
+
+#Borrar los datos de un empleado
+USE empresa;
+DELETE FROM empleados WHERE Nombre = 'Mauri';
+
+# Seleccionar el cargo de vendedor
+USE empresa;
+SELECT * FROM `cargos` WHERE Nombre_cargo = 'vendedor';
+
+#Ingresar un empleado nuevo
+INSERT INTO empleados (cargo, Nombre, Salario) VALUES ('vendedor', 'Marcia', 12987099);
+
